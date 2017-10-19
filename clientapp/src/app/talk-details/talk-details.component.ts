@@ -3,7 +3,8 @@ import {Backend} from "../backend";
 import {ActivatedRoute} from "@angular/router";
 import 'rxjs/add/operator/mergeMap';
 import {WatchService} from "../watch";
-import { Talk, State } from "../model";
+import { Talk } from "../ngrx/state/app.model";
+import { State } from "../ngrx/state/app.state";
 import { Store } from "@ngrx/store";
 
 @Component({

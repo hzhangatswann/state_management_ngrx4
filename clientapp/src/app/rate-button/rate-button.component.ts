@@ -1,5 +1,5 @@
 import {Component, Input, EventEmitter, Output} from '@angular/core';
-import {Talk} from "../model";
+import {Talk} from "../ngrx/state/app.model";
 
 @Component({
   selector: 'rate-button',

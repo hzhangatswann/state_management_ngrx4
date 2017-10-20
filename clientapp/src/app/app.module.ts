@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule, MdInputModule, MdCheckboxModule } from '@angular/material';
 import { Backend } from "./backend";
 import { WatchService } from "./watch";
-import { appReducer } from './store/reducers/app.reducer';
+import { reducers } from './store/reducers/app.reducer';
 import { initialState, State } from './store/state/app.state';
 import { TalksEffects } from './store/effects/app.effect';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -52,7 +52,7 @@ import { StoreRouterConnectingModule } from "@ngrx/router-store";
       { path: 'talk/:id', component: TalkDetailsComponent }
     ], {useHash: true}),
 
-    StoreModule.forRoot(<any>{app: appReducer}, {initialState}),
+    StoreModule.forRoot(reducers, {initialState}),
 
     EffectsModule.forRoot([
       TalksEffects

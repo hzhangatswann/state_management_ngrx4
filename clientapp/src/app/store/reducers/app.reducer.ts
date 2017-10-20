@@ -1,5 +1,6 @@
-import {AppState} from '../state/app.state';
+import {AppState, State} from '../state/app.state';
 import {Action} from '../actions/app.action';
+import {ActionReducerMap} from '@ngrx/store';
 
 export function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
@@ -31,3 +32,7 @@ export function appReducer(state: AppState, action: Action): AppState {
     }
   }
 }
+
+export const reducers: ActionReducerMap<State> = {
+  app: appReducer
+};

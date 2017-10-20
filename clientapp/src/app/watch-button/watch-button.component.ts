@@ -1,5 +1,5 @@
 import {Component, Input, EventEmitter, Output} from '@angular/core';
-import {Talk} from "../ngrx/state/app.model";
+import {Talk} from "../store/state/app.model";
 
 @Component({
   selector: 'watch-button',
